@@ -12,7 +12,8 @@ pipeline {
 		
           stage('Deploy on Application Machine') {
 	      steps {
-		  sh "nohup java -jar /var/lib/jenkins/workspace/testDjango/target/spring-boot-2-hello-world-1.0.2-SNAPSHOT.jar &"
+		  sh 'nohup java -jar /var/lib/jenkins/workspace/testDjango/target/spring-boot-2-hello-world-1.0.2-SNAPSHOT.jar &'
+		  sh 'tail -f nohup.out'
 		}
 	}		
     }
