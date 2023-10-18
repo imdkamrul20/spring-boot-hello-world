@@ -3,6 +3,7 @@ pipeline {
         node {
             label 'jenkins'
         }
+    }
     tools{
         maven 'maven3'
     }
