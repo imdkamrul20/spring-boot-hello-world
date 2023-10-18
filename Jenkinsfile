@@ -1,5 +1,8 @@
 pipeline {
-	agent any
+    agent {
+        node {
+            label 'jenkins'
+        }
     tools{
         maven 'maven3'
     }
