@@ -10,7 +10,7 @@ pipeline {
     stages{   
         stage('Build') {
             steps {
-                sh 'mvn clean package' // Assuming you are using Maven for building the microservices
+                sh 'mvn clean install' // Assuming you are using Maven for building the microservices
             }
         }
 		
